@@ -16,7 +16,6 @@ const Admin = () => {
     ];
     return (
         <div>
-            <SideNavbar>
                 <Row>
                     <Col xs={12} md={6} lg={3}>
                         <Card>
@@ -106,7 +105,6 @@ const Admin = () => {
                     </Col>
                 </Row>
                 <AdminChart />
-            </SideNavbar>
         </div>
     );
 };

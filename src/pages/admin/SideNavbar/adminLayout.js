@@ -24,7 +24,7 @@ import { menuData } from './menuData.js';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Image from 'react-bootstrap/Image';
+import Image from 'next/image';
 import Link from 'next/link';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Badge } from '@mui/material';
@@ -163,8 +163,12 @@ export default function AdminLayout(props) {
                     <NavDropdown.Item>Your Profile</NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown className=" me-3" title={<Image src='image/my.png' roundedCircle width={30} height={30} />} id="user-dropdown">
-                    <NavDropdown.Item onClick={() => onLogout()}>Logout</NavDropdown.Item>
+                  <NavDropdown className="me-3" title={
+                    <div style={{ width: '30px', height: '30px', borderRadius: '50%', overflow: 'hidden' }}>
+                      <Image src='/image/my.png' alt="User Image" width={30} height={30} />
+                    </div>
+                  } id="user-dropdown">
+                    <NavDropdown.Item >Logout</NavDropdown.Item>
                     <NavDropdown.Item>Your Profile</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
@@ -193,7 +197,7 @@ export default function AdminLayout(props) {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
           <Link href={'/admin'}>
-            <Image className='ms-4' src='image/tactsoft-logo.png' height={55} />
+            <Image className='ms-3' src='/image/tactsoft-logo.png' alt="Logo" width={120} height={55} />
           </Link>
         </DrawerHeader>
         <Divider />

@@ -1,4 +1,4 @@
-import { getAllCountry, getCityByState, getStateByCountry, getStates } from '@/Services/common/common.service';
+import { getAllCountry, getCityByState, getStateByCountry, getStates } from '@/Services/common/Common.service';
 import { getSingleEmployee, updateEmployee } from '@/Services/employee/employee.service';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';

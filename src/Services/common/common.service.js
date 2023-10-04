@@ -55,9 +55,24 @@ async function getStates() {
     }
 }
 
+async function getCities() {
+    try {
+        const response = await fetch(`${apiUrl}/City/dropdown`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
+    }
+}
+
 export {
     getAllCountry,
     getStateByCountry,
     getCityByState,
-    getStates
+    getStates,
+    getCities
 }

@@ -6,12 +6,20 @@ import LaptopIcon from '@mui/icons-material/Laptop';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 import ManIcon from '@mui/icons-material/Man';
 import WomanIcon from '@mui/icons-material/Woman';
+import { Man2 } from '@mui/icons-material';
+import { Group } from '@material-ui/icons';
 export const menuData = [
     {
         label: "Home",
         link: "/admin",
         submenu: null,
         icon: <AddHomeIcon />
+    },
+    {
+        label: "Employee",
+        link: "/admin/employee",
+        submenu: null,
+        icon: <Group />
     },
     {
         label: "Products",
