@@ -29,6 +29,7 @@ import Link from 'next/link';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Badge } from '@mui/material';
 import CommentIcon from '@mui/icons-material/Comment';
+import { useRouter } from 'next/router';
 // import Footer from '@/Component/Layout/Frontend/Footer.js';
 
 const drawerWidth = 240;
@@ -123,6 +124,17 @@ export default function AdminLayout(props) {
     }
   };
 
+  const router = useRouter()
+
+  const isRouteOrParentActive = (route) => {
+    const currentRoute = router.pathname;
+    const currentRouterSplit = router.pathname.split("/");
+    const routeSplit = route.split('/');
+    if (currentRouterSplit.length > 3) {
+      return currentRouterSplit[2] === routeSplit[2]
+    }
+    return currentRoute === route
+  };
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -203,8 +215,6 @@ export default function AdminLayout(props) {
         open={open}
       >
         <DrawerHeader >
-          {/* style={{background:"#F4F6F9"}} */}
-
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
@@ -232,9 +242,11 @@ export default function AdminLayout(props) {
                 </ListItemButton>
               </ListItem> :
                 <Link style={{ textDecoration: 'none', color: 'inherit' }} href={menuItem.link}>
-                  <ListItem disablePadding>
+                  <ListItem className={`${isRouteOrParentActive(menuItem.link) ? 'selected-menu' : ''
+                    }`} disablePadding>
                     <ListItemButton onClick={() => handleSubMenuToggle(index)}>
-                      <ListItemIcon>
+                      <ListItemIcon className={`${isRouteOrParentActive(menuItem.link) ? 'selected-icon' : ''
+                    }`}>
                         {menuItem.icon ? menuItem.icon : <InboxIcon />}
                       </ListItemIcon>
 

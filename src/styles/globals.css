@@ -28,6 +28,11 @@
     display: none !important;
 }
 
-/* .footer-area{
-    width: 110% !important;
-} */
+.selected-menu {
+    color: #fff !important;
+    background: #4998E8 !important;
+}
+
+.selected-icon {
+    color: #fff !important;
+}
