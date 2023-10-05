@@ -8,10 +8,9 @@ const AdminChart = () => {
         { label: "C", value: 15 },
         { label: "D", value: 30 },
         { label: "E", value: 20 },
-      ];
+    ];
     return (
         <div>
-            
             <BarChart data={data} />
         </div>
     );

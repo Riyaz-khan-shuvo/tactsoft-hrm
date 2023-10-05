@@ -197,7 +197,7 @@ export default function AdminLayout(props) {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
           <Link href={'/admin'}>
-            <Image className='ms-3' src='/image/tactsoft-logo.png' alt="Logo" width={120} height={55} />
+            <Image className='ms-3' src='/image/tactsoft-logo.png' alt="Logo" width={109} height={55} />
           </Link>
         </DrawerHeader>
         <Divider />
