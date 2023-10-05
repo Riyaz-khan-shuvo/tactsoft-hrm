@@ -29,6 +29,7 @@ import Link from 'next/link';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Badge } from '@mui/material';
 import CommentIcon from '@mui/icons-material/Comment';
+// import Footer from '@/Component/Layout/Frontend/Footer.js';
 
 const drawerWidth = 240;
 
@@ -75,6 +76,17 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
   justifyContent: 'flex-start',
+}));
+
+
+const Footer = styled('div')(({ theme }) => ({
+  backgroundColor: "#F4F6F9",
+  color: 'black',
+  padding: theme.spacing(2),
+  textAlign: 'center',
+  position: 'fixed',
+  bottom: 0,
+  width: '100%',
 }));
 
 export default function AdminLayout(props) {
@@ -308,13 +320,16 @@ export default function AdminLayout(props) {
           ))}
         </List>
       </Drawer>
+
       <Main open={open}>
         <DrawerHeader />
-        <div >
+        <div className='mb-5'>
           {props.children}
         </div>
       </Main>
-
+      <Footer>
+        &copy; {new Date().getFullYear()}  Tactsoft Limited
+      </Footer>
     </Box>
   );
 }

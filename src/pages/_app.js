@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import AdminLayout from './admin/SideNavbar/adminLayout'
 import { useRouter } from 'next/router';
-import FrontendLayout from '@/Component/FrontendLayout';
+import FrontendLayout from '@/Component/Layout/Frontend/FrontendLayout';
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
