@@ -20,7 +20,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import { menuData } from './menuData.js';
+import { menuData } from './menuData';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import NavDropdown from 'react-bootstrap/NavDropdown';

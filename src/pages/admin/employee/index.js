@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import ReactPaginate from 'react-paginate';
-import AdminLayout from '../../../Component/Layout/Admin/adminLayout';
+import AdminLayout from '../../../component/layout/admin/adminLayout';
 
 
 const Employee = () => {
