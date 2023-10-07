@@ -74,7 +74,7 @@ const CreateEmployee = () => {
             const data = new FormData(e.target)
             const addEmp = await addEmployee(data);
             e.target.reset()
-            router.push("/emp")
+            router.push("/admin/employee")
         } catch (error) {
             console.error('Error adding country:', error);
         }

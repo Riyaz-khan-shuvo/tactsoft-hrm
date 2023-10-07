@@ -8,6 +8,8 @@ import ManIcon from '@mui/icons-material/Man';
 import WomanIcon from '@mui/icons-material/Woman';
 import { Man2 } from '@mui/icons-material';
 import { Group } from '@material-ui/icons';
+import DepartureBoardIcon from '@mui/icons-material/DepartureBoard';
+
 export const menuData = [
     {
         label: "Home",
@@ -20,6 +22,12 @@ export const menuData = [
         link: "/admin/employee",
         submenu: null,
         icon: <Group />
+    },
+    {
+        label: "Department",
+        link: "/admin/department",
+        submenu: null,
+        icon: <DepartureBoardIcon />
     },
     {
         label: "Products",
