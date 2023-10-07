@@ -1,4 +1,4 @@
-import AdminLayout from "../SideNavbar/adminLayout";
+import AdminLayout from "../../../Component/Layout/Admin/adminLayout";
 
 
 export default function App({ Component, pageProps }) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { Icon } from '@mui/material';
-import SideNavbar from './SideNavbar/adminLayout';
+import SideNavbar from '../../Component/Layout/Admin/adminLayout';
 import BarChart from './barchart';
 import AdminChart from '@/Admin/Admin';
 

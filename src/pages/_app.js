@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import AdminLayout from './admin/SideNavbar/adminLayout'
+import AdminLayout from '../Component/Layout/Admin/adminLayout'
 import { useRouter } from 'next/router';
 import FrontendLayout from '@/Component/Layout/Frontend/FrontendLayout';
 

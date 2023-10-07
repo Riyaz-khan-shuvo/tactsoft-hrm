@@ -1,5 +1,5 @@
 import React from 'react';
-import SideNavbar from '../SideNavbar/adminLayout';
+import SideNavbar from '../../../Component/Layout/Admin/adminLayout';
 
 const Products = () => {
     return (

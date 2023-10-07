@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminLayout from './admin/SideNavbar/adminLayout';
+import AdminLayout from '../Component/Layout/Admin/adminLayout';
 
 const home = () => {
     return (

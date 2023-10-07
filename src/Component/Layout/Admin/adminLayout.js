@@ -246,7 +246,7 @@ export default function AdminLayout(props) {
                     }`} disablePadding>
                     <ListItemButton onClick={() => handleSubMenuToggle(index)}>
                       <ListItemIcon className={`${isRouteOrParentActive(menuItem.link) ? 'selected-icon' : ''
-                    }`}>
+                        }`}>
                         {menuItem.icon ? menuItem.icon : <InboxIcon />}
                       </ListItemIcon>
 
