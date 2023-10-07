@@ -92,9 +92,9 @@ const Footer = styled('div')(({ theme }) => ({
 
 export default function AdminLayout(props) {
   const theme = useTheme();
-  const [open, setOpen] = useState(false);
-
-
+  const [open, setOpen] = useState(true);
+  const [subMenuOpen, setSubMenuOpen] = useState([]);
+  const [subSubMenuOpen, setSubSubMenuOpen] = useState([]);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -103,9 +103,6 @@ export default function AdminLayout(props) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
-  const [subMenuOpen, setSubMenuOpen] = useState([]);
-  const [subSubMenuOpen, setSubSubMenuOpen] = useState([]);
 
   const handleSubMenuToggle = (index) => {
     if (subMenuOpen.includes(index)) {
@@ -135,6 +132,7 @@ export default function AdminLayout(props) {
     }
     return currentRoute === route
   };
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />

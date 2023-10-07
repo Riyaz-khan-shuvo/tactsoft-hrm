@@ -10,8 +10,8 @@ export default function App({ Component, pageProps }) {
   const isLoginRoute = router.pathname.endsWith('/login') || router.pathname.endsWith('/register');
   const Layout = isAdminRoute ? AdminLayout : FrontendLayout;
   // const Layout = isLoginRoute ?  "" : isAdminRoute ? AdminLayout : FrontendLayout;
-  console.log(isLoginRoute);
-  console.log(router.pathname);
+  // console.log(isLoginRoute);
+  // console.log(router.pathname);
   return (
     <Layout>
       <Component {...pageProps} />
